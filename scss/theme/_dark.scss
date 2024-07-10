@@ -22,4 +22,8 @@ html.dark {
     saturate(1795%) hue-rotate(186deg) brightness(90%) contrast(83%);
   --top-menu-border-color: #171c28;
   --menu-column-icon-color: brightness(0) saturate(100%) invert(95%) sepia(24%) saturate(969%) hue-rotate(257deg) brightness(113%) contrast(93%);
+
+  //Sidebar;
+  --sidebar-bg: #292E39;
+  --sidebar-shadow:rgba(23, 28, 40, 0.40);
 }
