@@ -23,7 +23,12 @@ html.dark {
   --top-menu-border-color: #171c28;
   --menu-column-icon-color: brightness(0) saturate(100%) invert(95%) sepia(24%) saturate(969%) hue-rotate(257deg) brightness(113%) contrast(93%);
 
-  //Sidebar;
+  //Sidebar
   --sidebar-bg: #292E39;
   --sidebar-shadow:rgba(23, 28, 40, 0.40);
+
+  //Category Item
+  --cate-item-bg: #171c28;
+  --cate-item-thumb-bg: #292e39;
+  --cate-item-title-color: #fff;
 }
