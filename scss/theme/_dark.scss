@@ -1,34 +1,40 @@
 @use "../abstracts";
 
 html.dark {
-  --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
-    saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    --text-color: #fff;
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 
-  --body-bg: #292e39;
-  --header-bg-color: #171c28;
-  --top-act-group-bg-color: #292e39;
-  --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-  --top-act-group-separate: #ededf6;
+    --body-bg: #292e39;
+    --header-bg-color: #171c28;
+    --top-act-group-bg-color: #292e39;
+    --top-act-group-shadow: rgba(0, 0, 0, 0.2);
+    --top-act-group-separate: #ededf6;
 
-  @include abstracts.screen(lg) {
-    --header-shadow-color: rgba(0, 0, 0, 0.2);
-  }
+    @include abstracts.screen(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.2);
+    }
 
-  //Dropdown
-  --dropdown-bg-color: #2f3441;
-  --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(8%)
-    saturate(1795%) hue-rotate(186deg) brightness(90%) contrast(83%);
-  --top-menu-border-color: #171c28;
-  --menu-column-icon-color: brightness(0) saturate(100%) invert(95%) sepia(24%) saturate(969%) hue-rotate(257deg) brightness(113%) contrast(93%);
+    //Dropdown
+    --dropdown-bg-color: #2f3441;
+    --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(8%) saturate(1795%) hue-rotate(186deg) brightness(90%) contrast(83%);
+    --top-menu-border-color: #171c28;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(95%) sepia(24%) saturate(969%) hue-rotate(257deg) brightness(113%) contrast(93%);
 
-  //Sidebar
-  --sidebar-bg: #292E39;
-  --sidebar-shadow:rgba(23, 28, 40, 0.40);
+    //Sidebar
+    --sidebar-bg: #292e39;
+    --sidebar-shadow: rgba(23, 28, 40, 0.4);
 
-  //Category Item
-  --cate-item-bg: #171c28;
-  --cate-item-thumb-bg: #292e39;
-  --cate-item-title-color: #fff;
+    //Category Item
+    --cate-item-bg: #171c28;
+    --cate-item-thumb-bg: #292e39;
+    --cate-item-title-color: #fff;
+
+    //Button
+    --filter-btn-color: #fff;
+    --filter-btn-bg: #171c28;
+
+    //Product Card
+    --product-card-bg: #171c28;
+    --product-card-shadow: rgba(0, 0, 0, 0.2);
 }
