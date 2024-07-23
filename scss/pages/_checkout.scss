@@ -29,6 +29,19 @@
         padding: 16px;
     }
 
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.42;
+    }
+
+    &__sub-heading {
+        margin: 30px 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
     &__list {
         margin-top: -30px;
 
@@ -111,7 +124,7 @@
         gap: 16px;
 
         &:last-child {
-            border: none
+            border: none;
         }
     }
 
@@ -150,7 +163,6 @@
             flex-direction: column;
         }
 
-        
         @include abstracts.screen(md) {
             flex-direction: column;
 
@@ -206,6 +218,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.47;
+
+        &-btn {
+            display: flex;
+        }
     }
 
     &__total-price {
@@ -261,5 +277,131 @@
         margin-top: 10px;
         font-size: 1.4rem;
         line-height: 1.43;
+    }
+}
+
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    &__btn {
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
+    }    
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 1.47;
+    }
+
+    &__list {
+    }
+
+    &__message {
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    &__link {
+        color: #0071dc;
+    }
+}
+
+.address-card {
+    display: flex;
+    margin-top: 30px;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 1;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__info {
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__desc {
+        width: min(520px, 90%);
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 1.47;
+    }
+
+    &__list {
+        margin-top: 20px;
+        display: flex;
+        gap: 30px;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        list-style: disc inside; // List-style-position
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-item {
+            margin-left: 8px;
+        }
+    }
+
+    &__ctrl {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            line-height: 1.44;
+        }
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none; // Loại bỏ CSS mặc định của user agent
+
+            &::before {
+                content: url(../icons/checkbox-uncheck.svg);
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url(../icons/checkbox-checked.svg);
+            }
+        }
     }
 }
