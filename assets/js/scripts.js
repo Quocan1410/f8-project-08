@@ -212,3 +212,61 @@ window.addEventListener("template-loaded", () => {
         });
     });
 });
+
+window.addEventListener("template-loaded", () => {
+    const paymentDeliverys = document.querySelectorAll(".checked-input");
+    const inputCheckedAllCls = "checked-all";
+    const inputCheckedCls = "checked__item";
+
+    if (paymentDeliverys) {
+        paymentDeliverys.forEach((paymentDelivery, index) => {
+            paymentDelivery.onclick = () => {
+                const inputPayment = paymentDelivery.querySelector(`.${inputCheckedCls}`);
+                if (inputPayment) {
+                    if (inputPayment.checked) {
+                        inputPayment.click();
+                    } else {
+                        inputPayment.click();
+                    }
+                    // Check the state of all individual checkboxes
+                    updateCheckedAllState();
+                } else {
+                    alert(`Vui long them class ${inputCheckedCls} vao input can check`);
+                }
+            };
+        });
+    }
+
+    const checkedAll = document.querySelector(`.${inputCheckedAllCls}`);
+    if (checkedAll) {
+        checkedAll.onclick = () => {
+            const inputCheckeds = document.querySelectorAll(`.${inputCheckedCls}`);
+            if (checkedAll.checked) {
+                for (const input of inputCheckeds) {
+                    if (!input.checked) {
+                        input.click();
+                    }
+                }
+            } else {
+                for (const input of inputCheckeds) {
+                    if (input.checked) {
+                        input.click();
+                    }
+                }
+            }
+        };
+    }
+
+    function updateCheckedAllState() {
+        const inputCheckeds = document.querySelectorAll(`.${inputCheckedCls}`);
+        const checkedAll = document.querySelector(`.${inputCheckedAllCls}`);
+        const allChecked = Array.from(inputCheckeds).every(input => input.checked);
+        checkedAll.checked = allChecked;
+    }
+
+    // Add event listeners to individual checkboxes to update the state of "check all"
+    const inputCheckeds = document.querySelectorAll(`.${inputCheckedCls}`);
+    inputCheckeds.forEach(input => {
+        input.addEventListener('click', updateCheckedAllState);
+    });
+});
