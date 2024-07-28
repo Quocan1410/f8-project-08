@@ -83,6 +83,7 @@
     &__text {
         font-size: 1.8rem;
         line-height: 1.5;
+        padding-right: 10px;
     }
 
     &__bottom {
@@ -90,8 +91,9 @@
         align-items: center;
         justify-content: flex-end;
         flex-wrap: wrap;
-        gap: 30px;
-        margin-top: 30px;
+        gap: 20px;
+        margin-top: 50px;
+        padding-right: 20px;
 
         @include abstracts.screen(md) {
             &__bottom {
